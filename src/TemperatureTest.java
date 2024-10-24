@@ -1,7 +1,7 @@
-import static org.testng.Assert.assertEquals;
-
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import static org.testng.Assert.assertEquals;
 
 public class TemperatureTest {
 
@@ -14,8 +14,9 @@ public class TemperatureTest {
         return new Object[][]{
                 {212.0, 100.0},
                 {32.0, 0.0},
-                {-15, -26.11111111111111}
-                // TODO add 2 more test data here
+                {-15, -26.11111111111111},
+                {98.6, 37.0},
+                {451.0, 232.77777777777777}
         };
     }
 
@@ -28,8 +29,9 @@ public class TemperatureTest {
         return new Object[][]{
                 {100.0, 212.0},
                 {0.0, 32.0},
-                {-26.11111111111111, -15}
-                // TODO add 2 more test data here
+                {-26.11111111111111, -15},
+                {37.0, 98.6},
+                {232.77777777777777, 451.0}
         };
     }
 
