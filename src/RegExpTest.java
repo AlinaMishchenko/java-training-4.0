@@ -5,11 +5,6 @@ import static org.testng.Assert.assertEquals;
 
 public class RegExpTest {
 
-    /**
-     * Test data.
-     *
-     * @return test data array
-     */
     @DataProvider(name = "text")
     public static Object[][] text() {
         return new Object[][]{
@@ -21,8 +16,9 @@ public class RegExpTest {
                 {" Invalid IP: 256.256.256.256!", ""},
                 {"invalid:256.256.256.256", ""},
                 {"valid IP: 255.255.255.255!", "255.255.255.255"},
-                {"invalid:255.255.255.255", "255.255.255.255"}
-                // TODO add 2 more test data here
+                {"invalid:255.255.255.255", "255.255.255.255"},
+                {"Check this IP 172.16.0.1 in the middle of text", "172.16.0.1"},
+                {"Multiple IPs: 10.0.0.1 and 192.168.0.100", "10.0.0.1"}
         };
     }
 
