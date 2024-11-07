@@ -1,17 +1,22 @@
-/**
- * ArrayUtil exercises.
- */
+import java.util.HashSet;
+import java.util.Set;
+
 public class ArrayUtil {
 
-    /**
-     * Finds the common elements between two arrays (String values).
-     *
-     * @param array1 first array
-     * @param array2 second array
-     * @return String array with common elements
-     */
     public static String[] findCommon(String[] array1, String[] array2) {
-        // TODO fill in code here
-        return new String[0];
+        Set<String> commonSet = new HashSet<>();
+        Set<String> elementsSet = new HashSet<>();
+
+        for (String element : array1) {
+            elementsSet.add(element);
+        }
+
+        for (String element : array2) {
+            if (elementsSet.contains(element)) {
+                commonSet.add(element);
+            }
+        }
+
+        return commonSet.toArray(new String[0]);
     }
 }

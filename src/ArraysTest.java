@@ -5,11 +5,6 @@ import static org.testng.Assert.assertEquals;
 
 public class ArraysTest {
 
-    /**
-     * Test data for common array elements.
-     *
-     * @return test data array
-     */
     @DataProvider(name = "ArrayUtil")
     public static Object[][] arrays() {
         return new Object[][]{
@@ -22,8 +17,17 @@ public class ArraysTest {
                         new String[]{"here", "is", "some", "text", ".", "text"},
                         new String[]{"some", "text", "above", "."},
                         new String[]{"some", "text", "."}
+                },
+                {
+                        new String[]{"Swift", "Pascal", "XQuery"},
+                        new String[]{},
+                        new String[]{}
+                },
+                {
+                        new String[]{"word", "are", "we"},
+                        new String[]{"above", "behind", "under"},
+                        new String[]{}
                 }
-                // TODO add 2 more test data here
         };
     }
 
